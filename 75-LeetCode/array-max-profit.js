@@ -1,12 +1,11 @@
 /* eslint-disable no-unused-vars */
 var maxProfit = function (prices) {
-  let min = prices[0];
-  let profit = 0;
-  let mostProfit = 0;
+  let minimum = prices[0];
+  let maxProfit = 0;
   for (let i = 1; i < prices.length; i++) {
-    min = prices[i] < min ? prices[i] : min;
-    profit = prices[i] - min;
-    mostProfit = profit >= mostProfit ? profit : mostProfit;
+    minimum = minimum > prices[i] ? prices[i] : minimum;
+    const profit = prices[i] - minimum;
+    maxProfit = maxProfit <= profit ? profit : maxProfit;
   }
-  return mostProfit;
+  return maxProfit;
 };
