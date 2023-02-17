@@ -12,7 +12,6 @@ const twoSum = function (nums, target) {
       idx++
     }
   } 
-  console.log(idx, lastIdx)
   return [idx, lastIdx]
 };
 
