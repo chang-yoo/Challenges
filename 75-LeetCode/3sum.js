@@ -21,7 +21,6 @@ var threeSum = function (nums) {
         left++;
         right--;
       }
-      console.log("HI")
     }
   }
   return output;
