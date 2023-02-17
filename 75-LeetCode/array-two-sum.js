@@ -1,13 +1,11 @@
 /* eslint-disable no-unused-vars */
+const nums = [1,2,3,6,11]
+const target = 5
+
 const twoSum = function (nums, target) {
-  const output = {};
-  for (let i = 0; i < nums.length; i++) {
-    const value = nums[i];
-    const pair = target - value;
-    if (output[pair] !== undefined) {
-      return [output[pair], i];
-    } else {
-      output[value] = i;
-    }
+  
+  for (let i = 0; i < nums.length; i++){
+    
   }
 };
+twoSum(nums, target)
