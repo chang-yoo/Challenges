@@ -9,4 +9,5 @@ var containsDuplicate = function (nums) {
   }
   return false;
 };
+
 console.log(containsDuplicate(nums))
