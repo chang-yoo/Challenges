@@ -13,7 +13,6 @@ const twoSum = function (nums, target) {
       idx++
     }
   } 
-  return [idx, lastIdx]
+  return [idx, lastIdx]  
 };
-
 twoSum(nums, target)
