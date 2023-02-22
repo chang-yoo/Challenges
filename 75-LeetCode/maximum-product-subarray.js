@@ -1,14 +1,18 @@
 // eslint-disable-next-line
-var maxProduct = function (nums) {
-  let max = nums[0];
-  const minValue = [nums[0]];
-  const maxValue = [nums[0]];
-  for (let i = 1; i < nums.length; i++) {
-    const current = nums[i];
-    minValue[i] = Math.min(current, current * minValue[i - 1], current * maxValue[i - 1]);
-    maxValue[i] = Math.max(current, current * maxValue[i - 1], current * minValue[i - 1]);
-    max = maxValue[i] >= max ? maxValue[i] : max;
+const nums = [-1,0,1,2,-1,-4];
 
+var maxProduct = function(nums) {
+  let min = nums[0]
+  let max = nums[0]
+  let global = nums[0]
+  if (nums.legnth ===1) return nums[0]
+
+  for (let i = 1; i < nums.length; i++){
+      max = Math.max(max*nums[i], min*nums[i], nums[i])
+      min = Math.min(max*nums[i], min*nums[i], nums[i])
+      global = Math.max(global, max)
   }
-  return max;
+  return global
 };
+
+maxProduct(nums);
