@@ -6,7 +6,7 @@ var search = function (nums, target) {
   while (left <= right) {
     const mid = Math.floor(left + (right - left) / 2);
 
-    if (target === nums[mid]) return mid;
+    if (target === nums[mid]) return mid; ///getting the index
 
     if (nums[left] <= nums[mid]) {
       if (nums[left] <= target && target < nums[mid]) {
@@ -22,4 +22,5 @@ var search = function (nums, target) {
       }
     }
   }
+  return -1
 };
